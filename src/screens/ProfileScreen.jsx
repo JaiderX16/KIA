@@ -16,11 +16,12 @@ const ProfileScreen = ({ navigate }) => (
         <div className={glassCard + " p-8 flex flex-col items-center relative overflow-hidden"}>
           <div className="absolute top-0 left-0 w-full h-32 md:h-40 bg-gradient-to-br from-blue-400/80 to-indigo-500/80"></div>
           
-          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-blue-100 mb-4 overflow-hidden border-4 border-white shadow-xl relative z-10 mt-6 md:mt-10">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400" alt="Avatar" className="w-full h-full object-cover"/>
+          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-indigo-600 mb-4 overflow-hidden border-4 border-white shadow-xl relative z-10 mt-6 md:mt-10 flex items-center justify-center">
+            <span className="text-white text-6xl md:text-7xl font-semibold">K</span>
           </div>
-          <h3 className="text-3xl font-black text-gray-800 z-10 tracking-tight mt-2">Ana Torres</h3>
-          <p className="text-gray-500 text-base mb-6 font-bold z-10 uppercase tracking-widest">Estudiante</p>
+          <h3 className="text-3xl font-black text-gray-800 z-10 tracking-tight mt-2">Kiara Sayuri</h3>
+          <p className="text-gray-600 font-semibold text-sm z-10 mb-1">74094447@continental.edu.pe</p>
+          <p className="text-gray-400 text-xs mb-6 font-bold z-10 uppercase tracking-widest">Estudiante</p>
           
           <div className="bg-white/90 backdrop-blur-md text-blue-700 px-6 py-3 rounded-full text-base font-bold flex items-center gap-2 border border-white shadow-md z-10 hover:scale-105 transition-transform cursor-pointer">
             <Award size={20} className="text-blue-500"/> Nivel: Eco Guardián
@@ -74,7 +75,7 @@ const ProfileScreen = ({ navigate }) => (
         <div className="mt-8 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl p-6 md:p-8 text-white shadow-lg border border-white/20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
           <div className="z-10 text-center md:text-left">
-            <h4 className="font-black text-2xl mb-1">¡Sigue así, Ana!</h4>
+            <h4 className="font-black text-2xl mb-1">¡Sigue así, Kiara!</h4>
             <p className="text-emerald-50 font-medium">Estás a solo 55 puntos del nivel "Héroe Ambiental".</p>
           </div>
           <button onClick={() => navigate('report')} className="z-10 bg-white text-emerald-600 font-bold px-6 py-3 rounded-full shadow-md hover:scale-105 active:scale-95 transition-all whitespace-nowrap">
