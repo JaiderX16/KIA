@@ -1,0 +1,2 @@
+export const glassCard = "bg-white/60 backdrop-blur-md border border-white/80 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.1)] rounded-[2rem]";
+export const primaryBtn = "w-full bg-blue-600/90 backdrop-blur-md text-white font-semibold py-4 rounded-full shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)] hover:bg-blue-600 hover:-translate-y-0.5 transition-all active:scale-95 border border-blue-500/30 flex items-center justify-center gap-2";
