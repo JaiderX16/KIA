@@ -4,7 +4,7 @@ import { glassCard, primaryBtn } from '../utils/styles';
 
 const ReportScreen = ({ navigate }) => (
   <div className="min-h-full flex flex-col w-full h-full">
-    <div className="flex items-center px-6 pt-16 md:pt-10 pb-4 bg-white/60 backdrop-blur-xl border-b border-white/50 sticky top-0 z-20">
+    <div className="flex items-center px-6 pt-8 md:pt-8 pb-4 bg-white/60 backdrop-blur-xl border-b border-white/50 sticky top-0 z-20">
       <button onClick={() => navigate('dashboard')} className="w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-gray-700 shadow-sm border border-white hover:bg-white transition-colors">
         <ChevronLeft size={20} />
       </button>
