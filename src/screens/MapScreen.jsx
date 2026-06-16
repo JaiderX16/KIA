@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Map, MapMarker, MapControls, MarkerContent } from './MapLibre';
+import React, { useState, useEffect } from 'react';
+import { Map, MapMarker, MapControls, MarkerContent, useMap } from './MapLibre';
 
 const recyclingPoints = [
   { id: 1, lat: -12.0671, lng: -75.2100, name: 'Punto Ecológico Centro', img: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=100&h=100&fit=crop' },
@@ -9,6 +9,28 @@ const recyclingPoints = [
   { id: 5, lat: -12.0680, lng: -75.1980, name: 'EcoPunto Mercado', img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=100&h=100&fit=crop' },
 ];
 
+const CinematicZoom = () => {
+  const { map, isLoaded } = useMap();
+
+  useEffect(() => {
+    if (!map || !isLoaded) return;
+    
+    const timer = setTimeout(() => {
+      map.flyTo({
+        center: [-75.2048, -12.0651],
+        zoom: 13,
+        duration: 4500, // Cinematic 4.5 seconds duration
+        essential: true,
+        curve: 1.2, // Slightly slower zoom curve
+      });
+    }, 800); // Start 0.8 seconds after loading
+
+    return () => clearTimeout(timer);
+  }, [map, isLoaded]);
+
+  return null;
+};
+
 const MapScreen = ({ navigate }) => {
   const [userLocation, setUserLocation] = useState(null);
 
@@ -17,7 +39,8 @@ const MapScreen = ({ navigate }) => {
       {/* Simple Starry CSS Background */}
       <div className="absolute inset-0 z-0 opacity-60 pointer-events-none" style={{ backgroundImage: 'radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)), radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)), radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 130px 80px, #ffffff, rgba(0,0,0,0)), radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0))', backgroundSize: '200px 200px' }}></div>
       
-      <Map mapTheme="satellite" zoom={13} center={[-75.2048, -12.0651]} projection={{ type: 'globe' }}>
+      <Map mapTheme="satellite" zoom={1.5} center={[-75.2048, -12.0651]} projection={{ type: 'globe' }}>
+         <CinematicZoom />
          <MapControls 
             showZoom={true} 
             showCompass={true} 
