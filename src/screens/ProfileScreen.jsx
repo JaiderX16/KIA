@@ -4,9 +4,9 @@ import { glassCard } from '../utils/styles';
 
 const ProfileScreen = ({ navigate }) => (
   <div className="min-h-full flex flex-col pb-24 md:pb-10 w-full max-w-[1200px] mx-auto">
-    <div className="flex items-center justify-between px-6 md:px-10 pt-16 md:pt-12 pb-6 text-gray-800 sticky top-0 z-20 bg-white/30 backdrop-blur-xl border-b border-white/20 mb-6">
+    <div className="flex items-center justify-between px-6 md:px-10 pt-16 md:pt-12 pb-6 sticky top-0 z-20 backdrop-blur-xl border-b border-white/20 dark:border-white/10 mb-6">
       <h2 className="font-extrabold text-3xl tracking-tight">Mi Perfil</h2>
-      <button className="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center text-gray-700 shadow-sm border border-white hover:bg-white transition-colors">
+      <button className="w-12 h-12 bg-white/50 dark:bg-white/10 rounded-full flex items-center justify-center shadow-sm border border-white dark:border-white/10 hover:bg-white dark:hover:bg-white/20 transition-colors">
         <Settings size={24} />
       </button>
     </div>

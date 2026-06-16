@@ -1,8 +1,8 @@
 import React from 'react';
-import { Menu, Bell, Leaf, Award, Recycle, CheckCircle2, Trash2 } from 'lucide-react';
+import { Menu, Bell, Leaf, Award, Recycle, CheckCircle2, Trash2, Sun, Moon } from 'lucide-react';
 import { glassCard } from '../utils/styles';
 
-const DashboardScreen = ({ navigate }) => (
+const DashboardScreen = ({ navigate, darkMode, setDarkMode }) => (
   <div className="min-h-full flex flex-col pb-6 md:pb-10 w-full">
     <div className="bg-gradient-to-br from-blue-600/90 to-indigo-600/90 backdrop-blur-2xl text-white p-6 pt-16 md:pt-12 pb-20 md:pb-16 md:rounded-[2.5rem] md:m-6 md:mb-0 relative shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] border-b md:border border-white/20">
       <div className="flex justify-between items-center mb-8">
@@ -10,10 +10,20 @@ const DashboardScreen = ({ navigate }) => (
           <Menu size={20} />
         </button>
         <div className="hidden md:block"></div>
-        <button className="p-2 bg-white/10 rounded-full backdrop-blur-md border border-white/10 hover:bg-white/20 transition relative">
-          <Bell size={20} />
-          <div className="absolute top-1.5 right-2 w-2 h-2 bg-red-400 rounded-full border border-indigo-600"></div>
-        </button>
+        <div className="flex items-center gap-3">
+          {setDarkMode && (
+            <button 
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 bg-white/10 rounded-full backdrop-blur-md border border-white/10 hover:bg-white/20 transition relative"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          )}
+          <button className="p-2 bg-white/10 rounded-full backdrop-blur-md border border-white/10 hover:bg-white/20 transition relative">
+            <Bell size={20} />
+            <div className="absolute top-1.5 right-2 w-2 h-2 bg-red-400 rounded-full border border-indigo-600"></div>
+          </button>
+        </div>
       </div>
       <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1 md:mb-2">¡Hola, Kiara!</h1>
       <p className="text-blue-100/80 text-sm md:text-base font-medium">Aquí está tu resumen de impacto.</p>

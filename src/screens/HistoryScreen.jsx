@@ -4,19 +4,19 @@ import { glassCard } from '../utils/styles';
 
 const HistoryScreen = ({ navigate }) => (
   <div className="min-h-full flex flex-col pb-24 md:pb-10 w-full max-w-[1200px] mx-auto">
-    <div className="flex items-center px-6 md:px-10 pt-16 md:pt-12 pb-6 sticky top-0 z-20 bg-white/30 backdrop-blur-xl border-b border-white/20 mb-6">
-      <h2 className="flex-1 font-extrabold text-3xl text-gray-800 tracking-tight">Tu Actividad</h2>
+    <div className="flex items-center px-6 md:px-10 pt-16 md:pt-12 pb-6 sticky top-0 z-20 backdrop-blur-xl border-b border-white/20 dark:border-white/10 mb-6">
+      <h2 className="flex-1 font-extrabold text-3xl tracking-tight">Tu Actividad</h2>
       
-      <div className="hidden md:flex bg-white/60 backdrop-blur-md rounded-full p-1.5 shadow-sm border border-white">
-        <button className="px-8 bg-white text-gray-800 font-bold py-2 rounded-full text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all">Historial</button>
-        <button className="px-8 text-gray-500 font-bold py-2 rounded-full text-sm hover:text-gray-700 transition-all">Estadísticas</button>
+      <div className="hidden md:flex bg-white/60 dark:bg-white/10 backdrop-blur-md rounded-full p-1.5 shadow-sm border border-white dark:border-white/10">
+        <button className="px-8 bg-white dark:bg-white/20 font-bold py-2 rounded-full text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all">Historial</button>
+        <button className="px-8 text-gray-500 dark:text-gray-400 font-bold py-2 rounded-full text-sm hover:text-gray-700 dark:hover:text-gray-200 transition-all">Estadísticas</button>
       </div>
     </div>
 
     <div className="md:hidden px-6 py-2 mb-4">
-      <div className="flex bg-white/50 backdrop-blur-md rounded-full p-1.5 shadow-sm border border-white">
-        <button className="flex-1 bg-white text-gray-800 font-bold py-2.5 rounded-full text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all">Historial</button>
-        <button className="flex-1 text-gray-500 font-bold py-2.5 rounded-full text-sm hover:text-gray-700 transition-all">Estadísticas</button>
+      <div className="flex bg-white/50 dark:bg-white/10 backdrop-blur-md rounded-full p-1.5 shadow-sm border border-white dark:border-white/10">
+        <button className="flex-1 bg-white dark:bg-white/20 font-bold py-2.5 rounded-full text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all">Historial</button>
+        <button className="flex-1 text-gray-500 dark:text-gray-400 font-bold py-2.5 rounded-full text-sm hover:text-gray-700 dark:hover:text-gray-200 transition-all">Estadísticas</button>
       </div>
     </div>
 
