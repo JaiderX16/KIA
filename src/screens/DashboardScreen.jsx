@@ -15,7 +15,7 @@ const DashboardScreen = ({ navigate }) => (
           <div className="absolute top-1.5 right-2 w-2 h-2 bg-red-400 rounded-full border border-indigo-600"></div>
         </button>
       </div>
-      <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1 md:mb-2">¡Hola, Ana!</h1>
+      <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1 md:mb-2">¡Hola, Kiara!</h1>
       <p className="text-blue-100/80 text-sm md:text-base font-medium">Aquí está tu resumen de impacto.</p>
     </div>
 

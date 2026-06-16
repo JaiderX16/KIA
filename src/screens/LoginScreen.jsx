@@ -31,7 +31,7 @@ const LoginScreen = ({ navigate }) => (
       <div className="space-y-4 mb-8">
         <div className="relative group">
           <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" size={20} />
-          <input type="email" placeholder="Correo institucional" className="w-full pl-12 pr-4 py-4 md:py-5 bg-white/50 backdrop-blur-sm border border-white/80 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:bg-white/80 transition-all shadow-sm text-gray-700" defaultValue="ana.torres@universidad.edu"/>
+          <input type="email" placeholder="Correo institucional" className="w-full pl-12 pr-4 py-4 md:py-5 bg-white/50 backdrop-blur-sm border border-white/80 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:bg-white/80 transition-all shadow-sm text-gray-700" defaultValue="kiara.unknown@universidad.edu"/>
         </div>
         <div className="relative group">
           <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" size={20} />
